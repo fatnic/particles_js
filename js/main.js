@@ -7,16 +7,17 @@ var Mouse = new Vec2();
 
 var pConfig = {
     direction: 270,
-    direction_variance: 25,
-    force: 2.2,
+    direction_variance: 45,
+    force: 4.2,
     force_variance: 0.5,
-    lifespan: 25,
-    lifespan_variance: 1,
+    lifespan: 150,
+    lifespan_variance: 100,
     decay: 2,
     decay_variance: 1,
     size: 2,
     size_variance: 1,
     rate: 3,
+    colour: {r:255, g:255, b:255, a:1}
 };
 
 var particles = new Particles(new Vec2(canvas.width/2, 160), pConfig);
