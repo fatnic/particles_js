@@ -8,13 +8,13 @@ var Mouse = new Vec2();
 var pConfig = {
     direction: 270,
     direction_variance: 25,
-    force: 3.5,
+    force: 2.2,
     force_variance: 0.5,
-    lifespan: 100,
-    lifespan_variance: 15,
+    lifespan: 25,
+    lifespan_variance: 1,
     decay: 2,
     decay_variance: 1,
-    size: 3,
+    size: 2,
     size_variance: 1,
     rate: 3,
 };
@@ -26,6 +26,7 @@ function init() {
 }
 
 function update() {
+    // particles.origin.set(Mouse.x, Mouse.y);
     particles.update();
 }
 
