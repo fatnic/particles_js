@@ -5,24 +5,28 @@ canvas.height = canvas.width / 16*9;
 
 var Mouse = new Vec2();
 
-var particles = new Particles(new Vec2(canvas.width/2, 160));
+var pConfig = {
+    direction: 270,
+    direction_variance: 25,
+    force: 3.5,
+    force_variance: 0.5,
+    lifespan: 100,
+    lifespan_variance: 15,
+    decay: 2,
+    decay_variance: 1,
+    size: 3,
+    size_variance: 1,
+    rate: 3,
+};
+
+var particles = new Particles(new Vec2(canvas.width/2, 160), pConfig);
 
 function init() {
     loop();
 }
 
 function update() {
-
-    particles.setDirection(270, 25);
-    particles.setForce(3.5, 0.5);
-    particles.setLifespan(150, 50);
-    particles.setDecay(4, 2);
-    particles.setSize(2, 1);
-    particles.setRate(1);
-
     particles.update();
-
-    for (var p in particles.particles) { if (particles.particles[p].position.y > canvas.height) { particles.particles.splice(p, 1); } }
 }
 
 function draw() {
