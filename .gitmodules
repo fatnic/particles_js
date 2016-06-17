@@ -1,0 +1,3 @@
+[submodule "js/libs"]
+	path = js/libs
+	url = git@github.com:fatnic/js_libs.git
