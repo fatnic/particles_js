@@ -10,14 +10,15 @@ var pConfig = {
     direction_variance: 45,
     force: 4.2,
     force_variance: 0.5,
-    lifespan: 150,
-    lifespan_variance: 100,
+    lifespan: 100,
+    lifespan_variance: 10,
     decay: 2,
     decay_variance: 1,
     size: 2,
     size_variance: 1,
     rate: 3,
-    colour: {r:255, g:255, b:255, a:1}
+    colour: {r:255, g:255, b:0},
+    alpha_start: 1
 };
 
 var particles = new Particles(new Vec2(canvas.width/2, 160), pConfig);
